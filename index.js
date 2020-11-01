@@ -10,7 +10,7 @@ const User = require("./models/user");
 app.use(cors());
 app.use(formidable());
 
-mongoose.connect("mongodb://localhost/formulaire", {
+mongoose.connect(process.env.BDD_ADRESS, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
